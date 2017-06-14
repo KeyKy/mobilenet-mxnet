@@ -23,4 +23,4 @@ MobileNet| 71.24| 90.15|
 - **scale: 0.017** is used as std values for image preprocessing
 - I use ChannelwiseConvolution from [paper](https://github.com/cypw/CRU-Net)
 - This model is converted from [Mobile-Caffe](https://github.com/shicai/MobileNet-Caffe)
-- If you like it, consider give me a star.
+- If you like it, consider giving me a star.
