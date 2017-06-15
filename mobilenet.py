@@ -84,7 +84,7 @@ def get_symbol(num_classes, **kwargs):
 
     conv5_2_sep = mx.symbol.Convolution(name='conv5_2_sep', data=relu5_2_dw , num_filter=512, pad=(0, 0), kernel=(1,1), stride=(1,1), no_bias=True)
     conv5_2_sep_bn = mx.symbol.BatchNorm(name='conv5_2_sep_bn', data=conv5_2_sep , use_global_stats=False, fix_gamma=False, eps=0.000100)
-conv5_2_sep_scale = conv5_2_sep_bn
+    conv5_2_sep_scale = conv5_2_sep_bn
     relu5_2_sep = mx.symbol.Activation(name='relu5_2_sep', data=conv5_2_sep_scale , act_type='relu')
 
     conv5_3_dw = mx.symbol.ChannelwiseConvolution(name='conv5_3_dw', data=relu5_2_sep , num_filter=512, pad=(1, 1), kernel=(3,3), stride=(1,1), no_bias=True, num_group=512)
