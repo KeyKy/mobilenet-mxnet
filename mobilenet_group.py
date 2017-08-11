@@ -1,5 +1,3 @@
-import sys
-sys.path.insert(0, '/data2/obj_detect/mxnet/python')
 import mxnet as mx
 
 def get_symbol(num_classes, **kwargs):
@@ -150,14 +148,4 @@ def get_symbol(num_classes, **kwargs):
     flatten = mx.symbol.Flatten(data=fc7, name='flatten')
     softmax = mx.symbol.SoftmaxOutput(data=flatten, name='softmax')
     return softmax
-
-if __name__ == '__main__':
-    mobilenet = get_symbol(3)
-    sym, args, auxs = mx.model.load_checkpoint('/data2/obj_detect/cache/mobilenet-mtovm', 55)
-    import ipdb; ipdb.set_trace()
-    model = mx.mod.Module(symbol=mobilenet, label_names=['softmax_label', ])
-    model.bind(data_shapes=[('data', tuple([1,3,224,224]))], label_shapes=[('softmax_label', (1,))])
-    model.init_params(arg_params=args, aux_params=auxs)
-    model.save_checkpoint('./mobilenet', 0)
-    sad = 0
 
