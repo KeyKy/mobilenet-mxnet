@@ -24,4 +24,4 @@ MobileNet| 71.24| 90.15|
 - I use ChannelwiseConvolution layer from [paper](https://github.com/cypw/CRU-Net)
 - This model is converted from [MobileNet-Caffe](https://github.com/shicai/MobileNet-Caffe)
 - If you like it, consider giving me a star.
-- I've finished a fast Depthwise mxnet operator! Now the infer time of mobilenet is 0.002s/image (batch-size=1, TITANX). Acc is 0.708. (The code will come soon!)
+- MXNet 11.0rc supports depthwiseConvolution now!
