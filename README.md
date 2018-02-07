@@ -4,6 +4,7 @@
 
 This is a MXNet implementation of Google's MobileNets. For details, please read the original paper:
 - [MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/abs/1704.04861)
+- [Inverted Residuals and Linear Bottlenecks: Mobile Networks for Classification, Detection and Segmentation](https://arxiv.org/abs/1801.04381)
 
 
 ### Pretrained Models on ImageNet
@@ -12,9 +13,10 @@ A pretrained MobileNet model on ImageNet is provided and you can use score.py to
 
 The top-1/5 accuracy rates by using single center crop (crop size: 224x224, image size: 256xN):
 
-Network|Top-1|Top-5|
+Network|Top-1|Top-5|model size
 :---:|:---:|:---:|
-MobileNet| 71.24| 90.15|
+MobileNet| 71.24| 90.15| 16.6MB |
+MobileNet-V2 | 71.62 | 90.27| 13.8MB |
 
 
 ### Notes
