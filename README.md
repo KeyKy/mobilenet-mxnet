@@ -14,7 +14,7 @@ A pretrained MobileNet model on ImageNet is provided and you can use score.py to
 The top-1/5 accuracy rates by using single center crop (crop size: 224x224, image size: 256xN):
 
 Network|Top-1|Top-5|model size
-:---:|:---:|:---:|
+:---:|:---:|:---:|---:|
 MobileNet| 71.24| 90.15| 16.6MB |
 MobileNet-V2 | 71.62 | 90.27| 13.8MB |
 
